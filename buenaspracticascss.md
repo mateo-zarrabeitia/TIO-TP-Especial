@@ -138,30 +138,30 @@ Números mágicos y absolutos.
 Una pseudo-clase CSS consta de una clave precedida de dos puntos (:) que añadiremos al final del selector para indicar que daremos estilo a los elementos seleccionados solo cuando estos se encuentren en un estado determinado. Por ejemplo podríamos querer dar estilo a un elemento cuando este se muestre al pasarle el puntero del ratón, o una caja de selección al estar habilitada o deshabilitada o cuando un elemento es hijo directo de su padre en el árbol DOM.
 
 ## Ejemplo de pseudo-clase ##
-* Por ahora, veamos un ejemplo de cómo usarlas. Primero, un fragmento de HTML:
+ Por ahora, veamos un ejemplo de cómo usarlas. Primero, un fragmento de HTML:
 
-* <a href="https://developer.mozilla.org/" target="_blank">Mozilla Developer Network</a>
-* Y las reglas CSS:
+ <a href="https://developer.mozilla.org/" target="_blank">Mozilla Developer Network</a>
+ Y las reglas CSS:
 
-* /* These styles will style our link
+ /* These styles will style our link
    in all states */
-* a {
-*  color: blue;
-*  font-weight: bold;
-* }
+ a {
+  color: blue;
+  font-weight: bold;
+ }
 
-* /* We want visited links to be the same color
+ /* We want visited links to be the same color
    as non visited links */
-* a:visited {
-*  color: blue;
-* }
+  a:visited {
+  color: blue;
+ }
 
-* /* We highlight the link when it is
+ /* We highlight the link when it is
    hovered (mouse), activated
    or focused (keyboard) */
-* a:hover,
-* a:active,
+ a:hover,
+ a:active,
 + a:focus {
-*  color: darkred;
+  color: darkred;
 +  text-decoration: none;
-* }
+ }
