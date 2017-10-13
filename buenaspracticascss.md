@@ -138,30 +138,57 @@ Números mágicos y absolutos.
 Una pseudo-clase CSS consta de una clave precedida de dos puntos (:) que añadiremos al final del selector para indicar que daremos estilo a los elementos seleccionados solo cuando estos se encuentren en un estado determinado. Por ejemplo podríamos querer dar estilo a un elemento cuando este se muestre al pasarle el puntero del ratón, o una caja de selección al estar habilitada o deshabilitada o cuando un elemento es hijo directo de su padre en el árbol DOM.
 
 ## Ejemplo de pseudo-clase ##
-* Por ahora, veamos un ejemplo de cómo usarlas. Primero, un fragmento de HTML:
+* Veamos un ejemplo de cómo usarlas. Primero, un fragmento de HTML:
 
 * <a href="https://developer.mozilla.org/" target="_blank">Mozilla Developer Network</a>
 * Y las reglas CSS:
 
-* /* These styles will style our link
-   in all states */
+* /* Estos estilos cambian los link en todos sus estados */
 * a {
 *  color: blue;
 *  font-weight: bold;
  }
 
-* /* We want visited links to be the same color
-   as non visited links */
+* /* Si queremos los link visitados de los no visitados del mismo color */
 *  a:visited {
 *  color: blue;
 * }
 
-* /* We highlight the link when it is
-   hovered (mouse), activated
-   or focused (keyboard) */
+* /* Remarcamos el link cuando pasamos con el mouse sobre él.
+   activado o el teclado activado*/
 * a:hover,
 * a:active,
 * + a:focus {
 *  color: darkred;
 * +  text-decoration: none;
+* }
+
+## Longitud y tamaño ##
+* Usamos unidades de longitud/tamaño (ver <length> como referencia) muy a menudo en diseños CSS, tipografía y otros. Veamos un ejemplo — primero el HTML:
+  <p>Esto es un párrafo.</p>
+  <p>Esto es un párrafo.</p>
+  <p>Esto es un párrafo.</p>
+
+ Y el CSS:
+
+* p {
+*   margin: 5px;
+*   padding: 10px;
+*   border: 2px solid black;
+*   background-color: cyan;
+* }
+* 
+* p:nth-child(1) {
+*   width: 150px;
+*   font-size: 18px;
+* }
+* 
+* p:nth-child(2) {
+*   width: 250px;
+*   font-size: 24px;
+* }
+* 
+* p:nth-child(3) {
+*   width: 350px;
+*   font-size: 30px;
 * }
