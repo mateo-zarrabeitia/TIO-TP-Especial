@@ -86,7 +86,7 @@ Como en todo lenguaje hay una serie de buenas y malas prácticas a evitar, como 
  * No ponemos un asterisco como prefijo en las líneas de código, ya que inhibiría
  * copiar y pegar.
  *
- */
+ * /
 
 Deberías documentar y comentar tu código tanto como sea posible, lo que puede parecer transparente y que se explica por sí mismo podría no serlo para otro desarrollador. Escribe un trozo de código y luego escribe sobre él.
 Números mágicos y absolutos.
@@ -117,21 +117,53 @@ Números mágicos y absolutos.
 ## Selectores universales vs IDs ##
 * Por increíble que parezca, los selectores universales son los menos eficientes de todos, mientras que los IDs son los más eficientes. Aquí puedes ver el orden de más a menos rápidos:
   * 1
-  * #content  {}              /* ID (el más rápido) */
+  ```
+   #content  {
+     /* ID (el más rápido) */
+     }      
+  ```        
   * 2
-  * .index #slider {}         /* ID */
+  ```
+  * .index #slider {
+    /* ID */
+    }         
+  ```  
   * 3
-  * .footer {}                /* Clase */
+  ```
+  * .footer {
+     /* Clase */
+  }               
+  ```
   * 4
-  * ul li a.nav {}            /* Clase */
+  ```
+  * ul li a.nav {
+    /* Clase */
+  }            
+  ```
   * 5
-  * ul {}                     /* Etiqueta */
+  ```
+  * ul {
+     /* Etiqueta
+  }                    
+  ```
   * 6
-  * ul li a }                /*Etiqueta */
+  ```
+  * ul li a {
+      /*Etiqueta */
+  }              
+  ```
   * 7
-  * {}                     /* Selector universal (el más lento) */
+  ```
+  * {
+    /* Selector universal (el más lento) */
+  }                     
+  ```
   * 8
-  * #content [title='index'] /* Selector universal */
+  ```
+  * #content [title='index'] {
+    /* Selector universal */
+  }
+  ```
 
   ## Pseudo-clases ##
 
@@ -177,17 +209,17 @@ Una pseudo-clase CSS consta de una clave precedida de dos puntos (:) que añadir
 *   border: 2px solid black;
 *   background-color: cyan;
 * }
-* 
+*
 * p:nth-child(1) {
 *   width: 150px;
 *   font-size: 18px;
 * }
-* 
+*
 * p:nth-child(2) {
 *   width: 250px;
 *   font-size: 24px;
 * }
-* 
+*
 * p:nth-child(3) {
 *   width: 350px;
 *   font-size: 30px;
