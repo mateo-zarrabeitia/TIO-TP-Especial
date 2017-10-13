@@ -68,3 +68,49 @@ Como en todo lenguaje hay una serie de buenas y malas prácticas a evitar, como 
 * Los selectores en general deben mantenerse cortos (Ej: una clase de profundidad) pero los nombres de las clases en sí mismas deben ser tan largas como lo necesiten. Una clase de '.user-avatar' siempre es mejor que '.usr-avt'
 
 * Recordad: Las clases no son semánticas o dejan de serlo; ellas son sensibles o insensibles! Dejad de peocuparos por la 'semántica' de los nombres de las clases y elige algo sensato y previsor.
+
+## Comentarios ##
+
+Uso comentarios estilo docBlock-esque a los que limito a 80 caracteres de longitud:
+
+/**
+ * Esto es un comentario estilo docBlock
+ *
+ * Esta es una descripción más larga del comentario, describiendo el código con más
+ * detalle. Limitamos estas líneas a 80 caracteres de longitud
+ *
+ * Podemos tener etiquetado en el comentario, y de hecho es recomendable:
+ *
+   <div class=foo>
+       <p>Lorem</p>
+   </div>
+ *
+ * No ponemos un asterisco como prefijo en las líneas de código, ya que inhibiría
+ * copiar y pegar.
+ *
+ */
+Deberías documentar y comentar tu código tanto como sea posible, lo que puede parecer transparente y que se explica por sí mismo podría no serlo para otro desarrollador. Escribe un trozo de código y luego escribe sobre él.
+
+## ID ##
+
+Una pequeña anotación acerca de IDs en CSS antes de entrar a ver selectores en general.
+
+NUNCA uséis IDs en CSS.
+
+Pueden ser usados en tu marcado para referencias de JS, pero usad sólo clases para estilos. No queréis ver una sola ID en ninguna hoja de estilos!
+
+Las clases vienen con el beneficio de ser reusables (aún si no queremos, podemos) y tienen un buen y bajo especificado. El especificado es una de las formas más rápidas de afrontar dificultades en proyectos y mantenerlo bajo en todo momento, es imperativo. Una ID es 255 veces más específico que una clase, por ello nunca los uses en CSS.
+
+## Selectores ##
+
+Mantén los selectores cortos, eficientes y portables.
+
+Selectores basados en su posición son malos por una variedad de razones. Por ejemplo, tomemos '.sidebar h3 span{}'. Este selector está basado en la posición y por ello no podemos mover ese 'span' fuera de un 'h3' fuera de un '.sidebar' y mantener el estilo.
+
+Los selectores que son muy largos también introducen problemas de optimización. Cuantas más verificaciones hay en un selector (Ej: '.sidebar h3 span' tiene tres verificaciones, '.content ul p a' tiene cuatro), más trabajo tiene el navegador.
+
+Siempre que sea posible nos aseguraremos que los estilos no dependan de la posición en el CSS, así como nos aseguraremos que los selectores son buenos y cortos.
+
+Los selectores en general deben mantenerse cortos (Ej: una clase de profundidad) pero los nombres de las clases en sí mismas deben ser tan largas como lo necesiten. Una clase de '.user-avatar' siempre es mejor que '.usr-avt'
+
+Recordad: Las clases no son semánticas o dejan de serlo; ellas son sensibles o insensibles! Dejad de peocuparos por la 'semántica' de los nombres de las clases y elige algo sensato y previsor.
