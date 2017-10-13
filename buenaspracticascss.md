@@ -71,8 +71,6 @@ Como en todo lenguaje hay una serie de buenas y malas prácticas a evitar, como 
 
 ## Comentarios ##
 
-Uso comentarios estilo docBlock-esque a los que limito a 80 caracteres de longitud:
-
 /**
  * Esto es un comentario estilo docBlock
  *
@@ -89,28 +87,23 @@ Uso comentarios estilo docBlock-esque a los que limito a 80 caracteres de longit
  * copiar y pegar.
  *
  */
+
 Deberías documentar y comentar tu código tanto como sea posible, lo que puede parecer transparente y que se explica por sí mismo podría no serlo para otro desarrollador. Escribe un trozo de código y luego escribe sobre él.
+Números mágicos y absolutos.
 
-## ID ##
+## Números mágicos y absolutos ##
+* Un número mágico es un número usado porque 'funciona'. Son malos porque raramente funcionan de verdad y no son muy seguros o flexibles/indulgentes. Tienden a solucionar síntomas y no problemas.
 
-Una pequeña anotación acerca de IDs en CSS antes de entrar a ver selectores en general.
+* Por ejemplo, usar '.dropdown-nav li:hover ul{ top:37px; }' para mover un desplegable abajo de la navegación en hover está mal, ya que 37px es un número mágico. 37px sólo funciona aquí porque en este escenario en particular el '.dropdown-nav' tiene 37px de alto.
 
-NUNCA uséis IDs en CSS.
+* En vez de eso, deberías usar '.dropdown-nav li:hover ul{ top:100%; }' que quiere decir que no importa el alto de '.dropdown.nav', el desplegable siempre se colocará a 100% del borde superior.
 
-Pueden ser usados en tu marcado para referencias de JS, pero usad sólo clases para estilos. No queréis ver una sola ID en ninguna hoja de estilos!
+* Piensa cada vez que escribes un número para que encaje en el layout; si puedes evitarlo usando 'aliases' (Ej: 'top:100%' para indicar 'todo a partir del borde superior') o —aún mejor— sin medida alguna.
 
-Las clases vienen con el beneficio de ser reusables (aún si no queremos, podemos) y tienen un buen y bajo especificado. El especificado es una de las formas más rápidas de afrontar dificultades en proyectos y mantenerlo bajo en todo momento, es imperativo. Una ID es 255 veces más específico que una clase, por ello nunca los uses en CSS.
+* Escribir medidas para que encajen en el layout es un compromiso que no necesariamente querrás mantener.
 
-## Selectores ##
+## '!important' ##
+* Está bien utilizar '!important' sólo en clases helper. Añadir '!important' preventivamente es correcto, Ej: '.error{ color:red!important;}', como ya sabrás siempre querrás que esta regla tenga prioridad.
 
-Mantén los selectores cortos, eficientes y portables.
+* Usar '!important' sensiblemente, Ej: para salir de malas situaciones de especificación, no es recomendado. Rehaz tu CSS e intenta combatir estos problemas reconstruyendo tus selectores. Mantener tus selectores cortos y evitando IDs ayudará enormemente.
 
-Selectores basados en su posición son malos por una variedad de razones. Por ejemplo, tomemos '.sidebar h3 span{}'. Este selector está basado en la posición y por ello no podemos mover ese 'span' fuera de un 'h3' fuera de un '.sidebar' y mantener el estilo.
-
-Los selectores que son muy largos también introducen problemas de optimización. Cuantas más verificaciones hay en un selector (Ej: '.sidebar h3 span' tiene tres verificaciones, '.content ul p a' tiene cuatro), más trabajo tiene el navegador.
-
-Siempre que sea posible nos aseguraremos que los estilos no dependan de la posición en el CSS, así como nos aseguraremos que los selectores son buenos y cortos.
-
-Los selectores en general deben mantenerse cortos (Ej: una clase de profundidad) pero los nombres de las clases en sí mismas deben ser tan largas como lo necesiten. Una clase de '.user-avatar' siempre es mejor que '.usr-avt'
-
-Recordad: Las clases no son semánticas o dejan de serlo; ellas son sensibles o insensibles! Dejad de peocuparos por la 'semántica' de los nombres de las clases y elige algo sensato y previsor.
