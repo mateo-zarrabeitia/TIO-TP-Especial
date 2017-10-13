@@ -113,3 +113,5 @@ Números mágicos y absolutos.
 * Borra trozos de CSS y marcado hasta que el problema desaparezca, así puedes determinar en que parte o línea reside el problema.
 
 * Puede ser tentador poner un 'overflow:hidden;' en un elemento para ocultar los efectos de un error en el layout, pero overflow nunca fue probablemente el problema. Arregla el problema, no sus síntomas.
+
+SIUDFSIDFHISDFUISFUISDFHUISDFUI
