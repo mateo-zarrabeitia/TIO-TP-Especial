@@ -18,36 +18,14 @@ Como en todo lenguaje hay una serie de buenas y malas prácticas a evitar, como 
 7. !important y position: absolute.
 8. Nombrar clases/IDs según su apariencia.
 
-### Buen estilo ###
-
-9. Declaraciones CSS una por línea.
-10. Comentar el código.
-11. Organizar el fichero CSS.
-12. Indentar tanto como sea necesario.
-13. Hacer el código fácil de leer.
-14. Usar un sistema común de nombrado.
-15. Declaraciones cortas alfabéticamente.
-16. Un “;” no es necesario en la última declaración.
-17. Si declaras una unidad de 0 px/em/%/… puedes omitir la unidad.
-18. Mantener contenedores, propiedades, selectores y CSS Hacks al mínimo.
-19. Selectores de grupo te permiten seleccionar varios elementos de una vez.
-20. Acortar la notación de colores en hexadecimal.
-21. Definir las pseudoclases para enlaces en el orden LoVe/HAte.
-22. Definir los márgenes, paddings y bordes de los elementos en el orden TRouBLed.
-23. Puedes utilizar selectores hijos.
-24. Hacer uso de diferentes tipos de medios.
-25. Nombrar a las clases/IDs según su función, no su apariencia.
-26. Aprender a explotar la cascada natural de CSS. CSS tiene sofisticadas reglas para la herencia de reglas.
-27. Puedes usar selectores de atributos. Los selectores de atributos hacen juego con elementos basados en la presencia o valor de atributos.
-28. Cambiar la capitalización con CSS.
-29. Ordenar todos los elementos pertenecientes a la cabecera, contenido principal, pie de página… juntos para tener una mejor visión general.
-30. Echa un vistazo a las guías de estilo de las grandes compañías.
-31. Busca inspiración en los gurús del diseño.
-32. Echa un vistazo a BluePrint, un framework de CSS, un montón de grandes ideas se encuentran integradas y documentadas.
 
 ### Buenas Practicas ###
 
 * Preferir **`<link>`** sobre **`@import`** para invocar hojas de estilo
+* Comentar el código.
+* Organizar el fichero CSS.
+* Indentar tanto como sea necesario.
+* Nombrar a las clases/IDs según su función, no su apariencia.
 * Definir siempre un **`font-size`** al elemento root (**`html`**) y hacerlo en **`px`**
 * Usar [**`box-sizing: border-box;`**](http://www.paulirish.com/2012/box-sizing-border-box-ftw/)
 * Estandarizar los estilos iniciales de nuestras etiquetas HTML para todos los navegadores
