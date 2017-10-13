@@ -20,10 +20,10 @@ Como en todo lenguaje hay una serie de buenas y malas prácticas a evitar, como 
 
 ###Buen estilo###
 
-10. Declaraciones CSS una por línea.
-11. Comentar el código.
-12. Organizar el fichero CSS.
-13. Indentar tanto como sea necesario.
-14. Hacer el código fácil de leer.
-15. Usar un sistema común de nombrado.
-16. Declaraciones cortas alfabéticamente.
+9. Declaraciones CSS una por línea.
+10. Comentar el código.
+11. Organizar el fichero CSS.
+12. Indentar tanto como sea necesario.
+13. Hacer el código fácil de leer.
+14. Usar un sistema común de nombrado.
+15. Declaraciones cortas alfabéticamente.
