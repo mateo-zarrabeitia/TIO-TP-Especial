@@ -116,19 +116,19 @@ Números mágicos y absolutos.
 
 ## Selectores universales vs IDs ##
 * Por increíble que parezca, los selectores universales son los menos eficientes de todos, mientras que los IDs son los más eficientes. Aquí puedes ver el orden de más a menos rápidos:
-  1
-  #content  {}              /* ID (el más rápido) */
-  2
-  .index #slider {}         /* ID */
-  3
-  .footer {}                /* Clase */
-  4
-  ul li a.nav {}            /* Clase */
-  5
-  ul {}                     /* Etiqueta */
-  6
-  ul li a }                /*Etiqueta */
-  7
+  * 1
+  * #content  {}              /* ID (el más rápido) */
+  * 2
+  * .index #slider {}         /* ID */
+  * 3
+  * .footer {}                /* Clase */
+  * 4
+  * ul li a.nav {}            /* Clase */
+  * 5
+  * ul {}                     /* Etiqueta */
+  * 6
+  * ul li a }                /*Etiqueta */
+  * 7
   * {}                     /* Selector universal (el más lento) */
-  8
-  #content [title='index'] /* Selector universal */
+  * 8
+  * #content [title='index'] /* Selector universal */
