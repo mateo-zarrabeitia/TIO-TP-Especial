@@ -165,7 +165,7 @@ Números mágicos y absolutos.
   }
   ```
 
-  ## Pseudo-clases ##
+## Pseudo-clases ##
 
 Una pseudo-clase CSS consta de una clave precedida de dos puntos (:) que añadiremos al final del selector para indicar que daremos estilo a los elementos seleccionados solo cuando estos se encuentren en un estado determinado. Por ejemplo podríamos querer dar estilo a un elemento cuando este se muestre al pasarle el puntero del ratón, o una caja de selección al estar habilitada o deshabilitada o cuando un elemento es hijo directo de su padre en el árbol DOM.
 
@@ -231,3 +231,39 @@ Remarcamos el link cuando pasamos con el mouse sobre él.
    font-size: 30px;
  }
 ```
+
+## Organizar los elementos en la hoja de estilos de arriba hacia abajo ##
+
+Cuando uno comienza va colocando el código según lo va necesitando. Pero esto no es una buena forma de hacer la estructura CSS. Si tenemos que realizar una búsqueda tardaremos más tiempo si no está ordenado.
+
+Como ejemplo:
+```
+/************* Hoja de estilos ****************/
+
+body { … }
+
+h1, h2, h3 {..}
+
+p {…}
+
+a {…}
+
+/******  Cabecera *********/
+
+#header {…}
+
+/****** Navegación *********/
+
+#nav {…}
+
+/****** Pie *********/
+
+#footer {…}
+```
+
+## Comprimir el contenido CSS ##
+
+Es una buena práctica eliminar los espacios para que el procesamiento por los navegadores sea más efectivo, aumentando la velocidad de carga de los mismos. Para ello existen Compresores CSS como [cssminifier]( https://cssminifier.com ).
+
+## Utilizar código Hexadecimal para colores ##
+De acuerdo a las pruebas de rendimiento realizadas por Sean Connon, Senior Web Developer en Alien Creations, Inc. los códigos hexadecimales hacen que el rendimiento de cargar sea como de un 70% de mejoría, por lo que se recomienda colocar los códigos y no el nombre del mismo.
