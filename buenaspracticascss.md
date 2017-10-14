@@ -225,7 +225,7 @@ Una pseudo-clase CSS consta de una clave precedida de dos puntos (:) que añadir
 *   font-size: 30px;
 * }
 
-Herencia
+## Herencia ##
 
 La herencia en CSS es la última pieza que necesitamos conocer para tener la información completa y comprender qué estilo se aplicará a un elemento. La idea es que unos elementos se heredarán por los elementos hijos, y otros no.
 
