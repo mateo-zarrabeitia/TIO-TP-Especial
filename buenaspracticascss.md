@@ -70,24 +70,24 @@ Como en todo lenguaje hay una serie de buenas y malas prácticas a evitar, como 
 * Recordad: Las clases no son semánticas o dejan de serlo; ellas son sensibles o insensibles! Dejad de peocuparos por la 'semántica' de los nombres de las clases y elige algo sensato y previsor.
 
 ## Comentarios ##
-
+```
 /**
- * Esto es un comentario estilo docBlock
- *
- * Esta es una descripción más larga del comentario, describiendo el código con más
- * detalle. Limitamos estas líneas a 80 caracteres de longitud
- *
- * Podemos tener etiquetado en el comentario, y de hecho es recomendable:
- *
-   <div class=foo>
-       <p>Lorem</p>
-   </div>
- *
- * No ponemos un asterisco como prefijo en las líneas de código, ya que inhibiría
- * copiar y pegar.
- *
- * /
+     Esto es un comentario estilo docBlock
 
+     Esta es una descripción más larga del comentario, describiendo el código con más
+     detalle. Limitamos estas líneas a 80 caracteres de longitud
+
+     Podemos tener etiquetado en el comentario, y de hecho es recomendable:
+
+       <div class=foo>
+           <p>Lorem</p>
+       </div>
+
+      No ponemos un asterisco como prefijo en las líneas de código, ya que inhibiría
+       copiar y pegar.
+
+ */
+```
 Deberías documentar y comentar tu código tanto como sea posible, lo que puede parecer transparente y que se explica por sí mismo podría no serlo para otro desarrollador. Escribe un trozo de código y luego escribe sobre él.
 Números mágicos y absolutos.
 
@@ -121,47 +121,47 @@ Números mágicos y absolutos.
    #content  {
      /* ID (el más rápido) */
      }      
-  ```        
+  ```      
   * 2
   ```
-  * .index #slider {
-    /* ID */
+   .index #slider {
+      /* ID */
     }         
   ```  
   * 3
   ```
-  * .footer {
-     /* Clase */
+   .footer {
+      /* Clase */
   }               
   ```
   * 4
   ```
-  * ul li a.nav {
+   ul li a.nav {
     /* Clase */
   }            
   ```
   * 5
   ```
-  * ul {
+   ul {
      /* Etiqueta
   }                    
   ```
   * 6
   ```
-  * ul li a {
+   ul li a {
       /*Etiqueta */
   }              
   ```
   * 7
   ```
-  * {
-    /* Selector universal (el más lento) */
+   *{
+      /* Selector universal (el más lento) */
   }                     
   ```
   * 8
   ```
-  * #content [title='index'] {
-    /* Selector universal */
+   #content [title='index'] {
+        /* Selector universal */
   }
   ```
 
@@ -172,55 +172,62 @@ Una pseudo-clase CSS consta de una clave precedida de dos puntos (:) que añadir
 ## Ejemplo de pseudo-clase ##
 * Veamos un ejemplo de cómo usarlas. Primero, un fragmento de HTML:
 
-* <a href="https://developer.mozilla.org/" target="_blank">Mozilla Developer Network</a>
+* [Mozilla Developer Network](https://developer.mozilla.org/)
 * Y las reglas CSS:
 
-* /* Estos estilos cambian los link en todos sus estados */
-* a {
-*  color: blue;
-*  font-weight: bold;
+ Estos estilos cambian los link en todos sus estados
+```
+ a {
+   color: blue;
+   font-weight: bold;
  }
+```
 
-* /* Si queremos los link visitados de los no visitados del mismo color */
-*  a:visited {
-*  color: blue;
-* }
-
-* /* Remarcamos el link cuando pasamos con el mouse sobre él.
-   activado o el teclado activado*/
-* a:hover,
-* a:active,
-* + a:focus {
-*  color: darkred;
-* +  text-decoration: none;
-* }
+ Si queremos los link visitados de los no visitados del mismo color
+```
+  a:visited {
+    color: blue;
+  }
+```
+Remarcamos el link cuando pasamos con el mouse sobre él.
+   activado o el teclado activado
+```   
+ a:hover,
+  a:active,
+  + a:focus {
+   color: darkred;
+  +  text-decoration: none;
+    }
+```
 
 ## Longitud y tamaño ##
 * Usamos unidades de longitud/tamaño (ver <length> como referencia) muy a menudo en diseños CSS, tipografía y otros. Veamos un ejemplo — primero el HTML:
+```
   <p>Esto es un párrafo.</p>
   <p>Esto es un párrafo.</p>
   <p>Esto es un párrafo.</p>
-
+```
  Y el CSS:
+```
+ p {
+   margin: 5px;
+   padding: 10px;
+   border: 2px solid black;
+   background-color: cyan;
+ }
 
-* p {
-*   margin: 5px;
-*   padding: 10px;
-*   border: 2px solid black;
-*   background-color: cyan;
-* }
-*
-* p:nth-child(1) {
-*   width: 150px;
-*   font-size: 18px;
-* }
-*
-* p:nth-child(2) {
-*   width: 250px;
-*   font-size: 24px;
-* }
-*
-* p:nth-child(3) {
-*   width: 350px;
-*   font-size: 30px;
-* }
+ p:nth-child(1) {
+   width: 150px;
+   font-size: 18px;
+ }
+
+ p:nth-child(2) {
+   width: 250px;
+   font-size: 24px;
+ }
+
+ p:nth-child(3) {
+   width: 350px;
+   font-size: 30px;
+ }
+```
