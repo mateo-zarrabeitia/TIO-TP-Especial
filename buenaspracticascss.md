@@ -224,3 +224,11 @@ Una pseudo-clase CSS consta de una clave precedida de dos puntos (:) que añadir
 *   width: 350px;
 *   font-size: 30px;
 * }
+
+Herencia
+
+La herencia en CSS es la última pieza que necesitamos conocer para tener la información completa y comprender qué estilo se aplicará a un elemento. La idea es que unos elementos se heredarán por los elementos hijos, y otros no.
+
+Por ejemplo, tiene sentido que font-family y color sean heredadas, pues nos facilita establecer un ancho de fuente básico aplicando una familia de fuentes al elemento <html>; después podemos reemplazar las fuentes de elementos individuales si es necesario. Sería realmente molesto tener que establecer la fuente base para cada elemento por separado.
+Otro ejemplo: tiene sentido que margin, padding, border, y background-image NO se hereden. Imaginemos el lio de formato/estilo que ocurriría si aplicamos estas propiedades en un elemento y fuera heredado por todos y cada uno de sus hijos, y después tener que "desaplicarlas" a todos los elementos también.
+Las propiedades que se heredan por defecto y las que no, viene marcado en gran medida por el sentido común. Pero para estar seguros podemos consultar la Referencia CSS — cada propiedad viene en una página que comienza con una tabla resumen que incluye diversos detalles sobre cada elemento, incluyendo si se hereda o no.
